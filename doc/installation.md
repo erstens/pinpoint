@@ -93,6 +93,7 @@ There are two options:
 	
 	The default agent built this way will have log level set to DEBUG by default. If you're building an agent for release and need a higher log level, you can set maven profile to *release* when building :  
 	`./mvnw install -Prelease -Dmaven.test.skip=true`
+	> notice : You can use the system `mvn` .For example ,Sometimes use proxy to download these resources .
 	
 	The guide will refer to the full path of the pinpoint home directory as `$PINPOINT_PATH`.
 
@@ -184,7 +185,7 @@ To wire up the agent, pass *$AGENT_PATH/pinpoint-bootstrap-$VERSION.jar* to the 
 
 * `-javaagent:$AGENT_PATH/pinpoint-bootstrap-$VERSION.jar`
 
-Additionally, Pinpoint Agent requires 2 command-line arguments in order to identify itself in the distributed system:
+Additionally, Pinpoint Agent requires 2 command-line arguments in order to identify itself in the distributed n:
 
 * `-Dpinpoint.agentId` - uniquely identifies the application instance in which the agent is running on
 * `-Dpinpoint.applicationName` - groups a number of identical application instances as a single service
